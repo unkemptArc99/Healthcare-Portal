@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type ="text/javascript  " defer src="https://code.getmdl.io/1.2.1/material.min.js"> </script>
+
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"> 
+<link rel="stylesheet" href="styles.css"> 
+
+
+</head>
+<body style="z-index: 1"> 
+<div style="background-color:black">
+<span style="margin-left:40px;position:relative;opacity:0.9">
+   <img  src="logo.png" style="height:80px; width : 100px; margin-left:80px ;margin-top:15px" >
+
+</span>
+<span style="position:absolute; z-index:1000; margin-top:35px">
+   <font color="white" face="times" size="80px" style="margin-top: 00px; margin-left:230px; "  >
+    Healthcare IIT Mandi
+</font> 
+</span>
+
+
+</div>
+</div>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " >
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall" style="z-index: 100">
+        <div class="mdl-layout__header-row " style="background-color:#000000">
+          
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field" placeholder="  Medicine search" style="font-style:italic">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation" >
+            
+              <a class="mdl-navigation__link mdl-typography--" href="pharmacy.html">Patient</a>
+              <div class=" mdl-navigation__link mdl-typography--" id="demo-menu-lower-left" style="cursor: pointer; z-index: 100">Staff</div>
+              <!-- Left aligned menu below button -->
+              <div id="sign" class=" mdl-navigation__link mdl-typography--" style="cursor: pointer; z-index: 100">New!</div>
+              <a class="mdl-navigation__link mdl-typography--" href="pharmacy.html">Pharmacy</a>
+              <a class="mdl-navigation__link mdl-typography--" href="about.html">About Us</a>
+              <a class="mdl-navigation__link mdl-typography--" href="contact.html">Contact</a>
+              <span onclick="window.location.href='home_alt.html'" class="mdl-navigation__link mdl-typography--" style="cursor:pointer">
+              <img  src="ic_home_white_48dp.png" style="height:40px; width : 40px; ;background-color:black ;opacity:0.8" >
+              </span>
+
+
+
+              
+            </nav>
+          </div>
+         </div>
+      </div>
+
+      
+
+  <div id = "drop" style="z-index: 100;">
+<ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+    for="demo-menu-lower-left" style=" opacity :0.8">
+  <li id="btn"  class="mdl-menu__item">Doctor Login</li>
+  <li id="btn2" class="mdl-menu__item mdl-menu__item--full-bleed-divider">Pharmacist</li>
+  
+</ul>
+</div>
+
+<main class="mdl-layout__content" style="background-color:#eaeaea">
+<br><br><br>
+<div style="margin-left :200px; font-size:30px">Contact Us <br><br>
+  <ul>  
+    <li><b>Tel: </b>267014</li>
+    <li><b>Emergency: </b>+91-9816663003</li>
+    <li><b>Ambulance: </b>Tel: +91-9816663003</li>
+    <li><b>Health advisory board: </b> arti@iitmandi.ac.in</li>
+</ul>
+</div>
+
+
+<div id="myModal" class="modal" style="z-index:1009; ">
+  <div class="modal-content" style="position:absolute;margin-top:100px;margin-left:510px">
+     <div class="mdl-card__title mdl-color--primary mdl-color-text--white" style="margin-top:8px;margin-left:8px;margin-right:8px">
+      
+        <h3 class="mdl-card__title-text" style="margin-left:86px "><b>Welcome! </b></h3>
+        <span class="close" style="margin-left:75px">×</span>
+       
+      </div>
+
+     <form action="#" style="margin-top:10px; padding:20px" >
+          <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
+            <input class="mdl-textfield__input" type="text" id="username"  />
+            <label class="mdl-textfield__label" for="username" >Username</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
+            <input class="mdl-textfield__input" type="password" id="userpass" />
+            <label class="mdl-textfield__label" for="userpass">Password</label>
+          </div>
+    </form>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" margin-left:78px;color: white; height:60px; width:160px;"> Login</button>
+    
+   
+  </div> 
+</div>
+
+
+
+<div id="myModal2" class="modal2" style="z-index:1009; ">
+  <div class="modal-content" style="position:absolute;margin-top:100px;margin-left:510px">
+     <div class="mdl-card__title mdl-color--primary mdl-color-text--white" style="margin-top:8px;margin-left:8px;margin-right:8px">
+      
+        <h3 class="mdl-card__title-text" style="margin-left:86px "><b>Welcome! </b></h3>
+        <span class="close2" style="margin-left:75px">×</span>
+       
+      </div>
+
+     <form action="#" style="margin-top:10px; padding:20px" >
+          <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
+            <input class="mdl-textfield__input" type="text" id="username"  />
+            <label class="mdl-textfield__label" for="username" >Username</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
+            <input class="mdl-textfield__input" type="password" id="userpass" />
+            <label class="mdl-textfield__label" for="userpass">Password</label>
+          </div>
+    </form>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" margin-left:78px;color: white; height:60px; width:160px;"> Login</button>
+   
+  </div> 
+</div>
+
+
+
+<div id="myModalsign" class="modalsign" style="z-index:1009; ">
+  <div class="modalsign-content" style="position:absolute;margin-top:100px;margin-left:510px">
+     <div class="mdl-card__title mdl-color--primary mdl-color-text--white" style="margin-top:12px;margin-left:8px;margin-right:8px">
+      
+        <h3 class="mdl-card__title-text" style="margin-left:86px "><b>New User! </b></h3>
+        <span class="closesign" style="margin-left:75px">×</span>
+       
+      </div>
+
+     <form action="#" style="margin-top:5px; padding:20px" >
+          <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
+            <input class="mdl-textfield__input" type="text" id="username"  />
+            <label class="mdl-textfield__label" for="username" >Enter Username</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
+            <input class="mdl-textfield__input" type="password" id="userpass" />
+            <label class="mdl-textfield__label" for="userpass">Enter Password</label>
+          </div>
+           <label class="mdl-radio mdl-js-radio" for="option1" style="margin-left:30px;opacity:0.4">
+            <input type="radio" id="option1" name="profession" class="mdl-radio__button" checked>
+            <span class="mdl-radio__label">Doctor</span>
+         </label>
+         <label class="mdl-radio mdl-js-radio" for="option2" style="margin-left:20px;opacity:0.4">
+            <input type="radio" id="option2" name="profession" class="mdl-radio__button" checked>
+            <span class="mdl-radio__label">Pharmacist</span>
+         </label>
+    </form>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--red" style="margin-top:10px; margin-left:78px;color: white; height:55px; width:160px;"> Sign up</button>
+   
+  </div> 
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+</body>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal2 = document.getElementById('myModal2');
+var btn = document.getElementById("btn");
+var btn2 = document.getElementById("btn2");
+var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
+
+btn.onclick = function() {
+    $('.modal').hide().fadeIn(1000);
+}
+
+btn2.onclick = function() {
+    $('.modal2').hide().fadeIn(1000);
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal||event.target==modal2||event.target==modalsign) {
+        modal.style.display = "none";
+        modal2.style.display = "none";
+        modalsign.style.display = "none";
+    }
+}
+
+
+
+
+var signin = document.getElementById("sign");
+var modalsign = document.getElementById('myModalsign');
+var spansign = document.getElementsByClassName("closesign")[0];
+
+signin.onclick = function() {
+    $('.modalsign').hide().fadeIn(1000);
+}
+
+// When the user clicks on <span> (x), close the modal
+spansign.onclick = function() {
+    modalsign.style.display = "none";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal||event.target==modal2||event.target==modalsign) {
+        modal.style.display = "none";
+        modal2.style.display = "none";
+        modalsign.style.display = "none";
+        
+    }
+}
+
+
+
+</script>
+
+<style>
+
+  .modal ,.modal2, .modalsign {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 25%;
+    height: 49%
+}
+
+/* The Close Button */
+.close,.close2,.closesign {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modalsign-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 25%;
+    height: 50%
+}
+
+.closesign:hover,
+.closesign:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</html>
+
+
