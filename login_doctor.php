@@ -6,7 +6,7 @@ $pass=$_POST["userpassdoc"];
 $dbname="FinalProject";
 $servername="localhost";
 $username="root";
-$password="Mandabarca1!t";
+$password="";
 
 
 $conn=mysqli_connect($servername,$username,$password,$dbname);
