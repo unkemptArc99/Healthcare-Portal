@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"> 
 <link rel="stylesheet" href="styles.css">
 
-
 </head>
 <body style="z-index:1">
 
@@ -22,7 +21,7 @@
       <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
         <div class="mdl-layout__header-row" style="background-color:black;height:80px">
           <h3 style="color:white;">Doctor's Portal</h3>
-          <div class="mdl-navigation__link mdl-typography--" style="font-size:20px;float:right;background-color:green;margin-left:260px">Welcome doctor!
+          <div class="mdl-navigation__link mdl-typography--" style="font-size:20px;float:right;background-color:green;margin-left:260px">
           <?php
           $conn=mysqli_connect("localhost","root","Mandabarca1!t","FinalProject");
           if(!$conn)
@@ -35,7 +34,7 @@
             $result=mysqli_query($conn,$query);
             while($row=mysqli_fetch_assoc($result))
             {
-              echo "Hi Dr.".$row['DocName']"!<br>";
+              echo "Hi Dr. ".$row['DocName']."!<br>";
             }
           }
           else

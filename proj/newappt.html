@@ -56,37 +56,26 @@
         </div>
         <nav class="mdl-navigation" style="font-style:italic;">
           <a class="mdl-navigation__link" href="doclogin.html"><b>Home</b></a>
-
-
           
              
         </nav>
       </div>
-
-
       <main class="mdl-layout__content" style="" >
       <div style="z-index:10;position:relative">
          <img  src="doc.jpg" style="height:550px; width : 1365px; opacity: 0.5;position:absolute">
      
-
        <div style="background-color:#4C5A65;padding:50px 50px 30px;margin:50px 920px;position:absolute;moz-border-radius:16px;-webkit-border-radius:16px;border-radius:16px;opacity:0.5;height:120px; width: 200px">
        </div>
-
-
        <div style="position:absolute;margin:50px 920px; height:100px">
         <b><h5 style=" font-style:italic;margin:20px 90px">Patient id</h5></b>
         <form>
           <input id ="pat" type="text" name="search" placeholder="Search.." style="font-style:italic">
+          <center> <button id="srch" style="margin-top:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary" type="button">Search</button></center>
         </form>
-        <center> <button id="srch" style="margin-top:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary" type="button">Search</button></center>
-
        </div>
-
-
        <div id="appt" style="display:none;background-color:#ffffff;padding:50px 50px 30px;margin:50px 300px;position:absolute;moz-border-radius:16px;-webkit-border-radius:16px;border-radius:16px;opacity:0.5;height:370px; width: 270px ;border: 3px solid black;">
        <img src="logo.png" style="opacity:0.3 ;margin-top:30px ;height:240px">
        </div>
-
        <div id="dispin" style="position:absolute;margin:50px 300px; display:none">
         <center><h5 style="color:; font-style:italic;margin-left:12px"><b>New Appointment</b></h5></center>
         
@@ -125,6 +114,7 @@
 </div>
 <script>
 (function() {
+  var flag=0;
   'use strict';
   var snackbarContainer = document.querySelector('#demo-snackbar-example');
   var showSnackbarButton = document.querySelector('#demo-show-snackbar');
@@ -133,16 +123,21 @@
   
     var data = {
       message: 'Appointment id   ',
-      timeout: 10000,
+      timeout: 8000,
      
     };
     snackbarContainer.MaterialSnackbar.showSnackbar(data);
+    flag=1;
   });
 }());
 </script>
 
 <script>
-  
+  document.getElementById("demo-show-snackbar").addEventListener("click",function () {
+  var timeoutID = window.setTimeout(function () {
+      location.reload();
+  }, 9000);
+});
  
 </script>
           
@@ -193,7 +188,6 @@
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
-
   #inpt {
     
    
@@ -209,71 +203,45 @@
     transition: width 0.4s ease-in-out;
     overflow: none;
 }
-
-
-
 }
 </style>  
 
 <script>
 // Get tffhe modal
-
 var modal2 = document.getElementById('myModal2');
-
 var btn2 = document.getElementById("btn2");
-
 var span2 = document.getElementsByClassName("close2")[0];
-
-
-
 btn2.onclick = function() {
     $('.modal2').hide().fadeIn(200);
      getElementById("bod").visibility="Hidden";
 }
-
 span2.onclick = function() {
     modal2.style.display = "none";
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target==modal2) {
       
   }
-
-
 var btn = document.getElementById('srch'); 
 var appt = document.getElementById('appt');
 var dispin = document.getElementById('dispin');
  var yes = document.getElementsByClassName("stay")[0];
-
-
  
-
  btn.onclick= function () {
   $('#appt').hide().fadeIn(500);
    $('#dispin').hide().fadeIn(1000);
   }
-
-
-
   yes.onclick= function () {
     $('#appt').hide().fadeOut(500);
    $('#dispin').hide().fadeOut(1000);
     modal2.style.display = "none";
   }
  
-
 }
-
-
-
-
-
 </script>
 
 <style>
-
   .modal2{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -287,7 +255,6 @@ var dispin = document.getElementById('dispin');
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
 }
-
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -296,7 +263,6 @@ var dispin = document.getElementById('dispin');
     width: 40%;
     height: 25%
 }
-
 /* The Close Button */
 .close2, .stay {
     color: #aaaaaa;
@@ -304,9 +270,6 @@ var dispin = document.getElementById('dispin');
     font-size: 18px;
     font-weight: bold;
 }
-
-
-
 .close2:hover,
 .close2:focus ,
 .stay:hover,
@@ -329,5 +292,3 @@ var dispin = document.getElementById('dispin');
 
 
 </html>
-
-
