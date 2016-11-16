@@ -67,7 +67,7 @@
          <img  src="doc.jpg" style="height:550px; width : 1365px; opacity: 0.5;position:absolute">
      
 
-       <div style="background-color:#4C5A65;padding:50px 50px 30px;margin:50px 920px;position:absolute;moz-border-radius:16px;-webkit-border-radius:16px;border-radius:16px;opacity:0.7;height:50px; width: 200px">
+       <div style="background-color:#4C5A65;padding:50px 50px 30px;margin:50px 920px;position:absolute;moz-border-radius:16px;-webkit-border-radius:16px;border-radius:16px;opacity:0.7;height:110px; width: 200px">
        </div>
 
 
@@ -75,6 +75,7 @@
         <b><h5 style="color:green; font-style:italic;margin:20px 90px">Patient id</h5></b>
         <form>
           <input id ="pat" type="text" name="search" placeholder="Search.." style="font-style:italic">
+           <center> <button id="srch" style="margin-top:20px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--primary" type="button">Search</button></center>
         </form>
 
        </div>
@@ -83,8 +84,36 @@
 
      </div>
 
+     <div id="hist" style="display:none; background-color:#4C5A65;padding:50px 50px 30px;margin:50px 120px;position:absolute;moz-border-radius:16px;-webkit-border-radius:16px;border-radius:16px;opacity:;height:310px; width: 260px">
+       </div>
+
+     <div id="histin" style="display: none ; position:absolute">
+         <table class="mdl-data-table mdl-js-data-table" style="position:absolute; z-index:11;margin: 80px 150px; ">
+  <thead>
+    <tr >
+      <th class="mdl-data-table__cell--non-numeric">Date</th>
+      <th class="mdl-data-table__cell--non-numeric">Prescription</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">John Lennon</td>
+      <td class="mdl-data-table__cell--non-numeric">The smart one   ksjdfas</td>
+      
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+
+     
+
+  
     
      </main>
+
+       
+
 <style type="text/css">
    #pat {
     width: 80%
@@ -107,6 +136,24 @@
 }
 </style>  
     
+<script>
+var btn = document.getElementById('srch'); 
+var hist = document.getElementById('hist');
+var histin = document.getElementById('histin');
+var back = document.getElementById('back');
+
+
+ btn.onclick= function () {
+  $('#hist').hide().fadeIn(500);
+  $('#histin').hide().fadeIn(500);
+  $('#back').hide().fadeIn(500);
+ 
+  }
+
+
+  
+
+</script>    
 
 
 </main>
