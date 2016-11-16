@@ -42,6 +42,7 @@
             echo "YOU HAVE BEEN LOGGED OUT.<br>Redirecting you back to login page.";
             echo "<meta http-equiv=\"refresh\" content=\"5;URL=home_alt.html\"/>";
           }
+          mysqli_close($conn);
           ?>
           </div>
           <!-- Add spacer, to align navigation to the right in desktop -->
@@ -59,7 +60,7 @@
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
 
-               <a class="mdl-navigation__link mdl-typography--" href="home_alt.html" style="cursor:pointer">Logout</a>
+               <a class="mdl-navigation__link mdl-typography--" href="logout.php" style="cursor:pointer">Logout</a>
                <a class="mdl-navigation__link mdl-typography--" href="">Home</a>
 
                

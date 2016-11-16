@@ -35,4 +35,5 @@ else
 	echo "LOGIN UNSUCCESSFUL. INVALID CREDENTIALS.<br>Redirecting you back to login page...";
 	echo "<meta http-equiv=\"refresh\" content=\"3;URL=home_alt.html\" />";
 }
+mysqli_close($conn);
 ?>

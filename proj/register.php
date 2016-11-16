@@ -61,5 +61,6 @@ else
 	{
 		echo "Error : ".mysqli_error($conn)."<br>";
 	}
+	mysqli_close($conn);
 }
 ?>
