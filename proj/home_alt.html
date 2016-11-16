@@ -146,7 +146,7 @@
        
       </div>
 
-     <form action="signup.php" style="margin-top:px; padding:20px" method="POST">
+     <form action="register.php" style="margin-top:px; padding:20px" method="POST">
          <div>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
             <input class="mdl-textfield__input"  type="text" id="usernamesup" name="usernamesup" />
@@ -164,20 +164,26 @@
           </span>
          <span class="mdl-textfield mdl-js-textfield " style="font-style:italic; width:180px;margin-left:20px ">
             <input class="mdl-textfield__input"  type="text" id="datepicker" name="datepicker" />
-            <label class="mdl-textfield__label" for="datepicker" >DOB</label>
+            <label class="mdl-textfield__label" for="datepicker" >DOB(yyyy-mm-dd)</label>
           </span>
+          </div>
+          <div>
+            <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
+              <input class="mdl-textfield__input "  type="text" id="contact" name="contact" />
+              <label class="mdl-textfield__label" for="contact" >Contact</label>  
+            </span>
           </div>
           <div style="font-style:italic">
            <label class="mdl-radio mdl-js-radio" for="option1" style="margin-top:20px;opacity:0.4">
-            <input type="radio" id="option1" name="profession" value="doc" class="mdl-radio__button" checked>
+            <input type="radio" id="option1" name="profession" value="option1" class="mdl-radio__button" checked>
             <span class="mdl-radio__label">Doctor</span>
          </label>
          <label class="mdl-radio mdl-js-radio" for="option2" style="margin-left:45px;opacity:0.4">
-            <input type="radio" id="option2" name="profession" value="pharm" class="mdl-radio__button" checked>
+            <input type="radio" id="option2" name="profession" value="option2" class="mdl-radio__button" checked>
             <span class="mdl-radio__label">Pharmacist</span>
          </label>
          <label class="mdl-radio mdl-js-radio" for="option3" style="margin-left:45px;opacity:0.4">
-            <input type="radio" id="option3" name="profession" value="pat" class="mdl-radio__button" checked>
+            <input type="radio" id="option3" name="profession" value="option3" class="mdl-radio__button" checked>
             <span class="mdl-radio__label">Patient</span>
          </label>
          </div>
