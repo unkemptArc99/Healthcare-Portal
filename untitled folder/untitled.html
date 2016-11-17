@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>check</title>
+  <style>
+ 
+ input{ width: 100%; padding:10px; }
+</style>
+</head>
+<body>
+<select name="aa" onchange="myFun(this.value)">
+  <option value="0">select no of medicines</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+</select>
+
+<table id="myTable">
+ 
+</table>
+<br>
+
+
+
+<script>
+function myFun(value){
+
+  var i;
+  var table = document.getElementById("myTable");
+  table.innerHTML="";
+
+  for (i=0;i<value;++i)
+    myFunction();
+}
+
+function myFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "<input type='text' value='id'/>";
+    cell2.innerHTML = "<input type='text' value='dosage'/>";
+}
+</script>
+  
+</body>
+</html>
