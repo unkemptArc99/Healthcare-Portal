@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pharm</title>
+<script type ="text/javascript  " defer src="https://code.getmdl.io/1.2.1/material.min.js"> </script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="material.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+  <style>
+     /* TODO: Hover and Focus state.
+ *       Fix position of mobile search button.
+ */
+.mdh-expandable-search {
+  margin: 0 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mdh-expandable-search form {
+  max-width: 600px;
+}
+
+.mdh-expandable-search,
+.mdh-expandable-search form,
+.mdh-expandable-search input {
+  /* Cross browser flex-grow */
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.mdh-expandable-search,
+.mdh-expandable-search form {
+  /* Cross browser inline-flex */
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/* Position search icon */
+.mdh-expandable-search .material-icons {
+  position: relative;
+  right: -40px;
+  margin-left: -24px; /* Remove the blank space left behind by the icon being relatively positioned */
+}
+
+.mdh-expandable-search input {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #78909C;
+  padding: 0px 35px 0px 70px;
+  height: 40px;
+  line-height: 40px; /* TODO: This was recommended for cross browser compatability of input height, check if its actually needed in modern browsers */
+  
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+}
+
+.mdh-expandable-search input::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #FFFFFF;
+}
+.mdh-expandable-search input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #FFFFFF;
+   opacity:  1; /* Firefox gives the placeholder a reduced opacity so we have to increase it */
+}
+.mdh-expandable-search input::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #FFFFFF;
+   opacity:  1; /* Firefox gives the placeholder a reduced opacity so we have to increase it */
+}
+.mdh-expandable-search input:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #FFFFFF;
+}
+
+
+/* Bug fix: https://github.com/google/material-design-lite/issues/1078
+ * To much padding on the left of header when the menu button is hidden */
+@media screen and (min-width: 851px) {
+  .mdl-layout__header-row {
+    padding: 0 40px 0 40px;
+  }
+}
+
+/* Bug fix for badges being in the wrong location */
+.mdl-badge[data-badge]:after {
+  right: -7px;
+  top: -8px;
+}
+
+
+  </style>
+
+  <script>
+ 
+     // TODO: this got hacky quick..... needs major refactor
+//       hide the two icons if the search box is below a certain size.
+$(document).ready(function() {
+  $('.mdh-toggle-search').click(function() {
+    // No search bar is currently shown
+    if ($(this).find('i').text() == 'search') {
+      $(this).find('i').text('cancel');
+      $(this).removeClass('mdl-cell--hide-tablet mdl-cell--hide-desktop'); // Ensures the close button doesn't disappear if the screen is resized.
+
+      $('.mdl-layout__drawer-button, .mdl-layout-title, .mdl-badge, .mdl-layout-spacer').hide();
+      $('.mdl-layout__header-row').css('padding-left', '16px'); // Remove margin that used to hold the menu button
+      $('.mdh-expandable-search').removeClass('mdl-cell--hide-phone').css('margin', '0 16px 0 0');
+      
+    }
+    // Search bar is currently showing
+    else {
+      $(this).find('i').text('search');
+      $(this).addClass('mdl-cell--hide-tablet mdl-cell--hide-desktop');
+      
+      $('.mdl-layout__drawer-button, .mdl-layout-title, .mdl-badge, .mdl-layout-spacer').show();
+      $('.mdl-layout__header-row').css('padding-left', '');
+      $('.mdh-expandable-search').addClass('mdl-cell--hide-phone').css('margin', '0 50px');
+    }
+    
+  });
+});
+
+  </script>
+
+</head>
+<body>
+
+<!-- The drawer is always open in large screens. The header is always shown,
+      even in small screens. -->
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header ">
+
+  <!-- Header -->
+  <header class="mdl-layout__header" style="height:60px">
+    <div class="mdl-layout__header-row "  style="background-color:black;height:80px">
+       <img src="logo.png" style="width:68px; height:50px; ; margin-right:30px">
+      <span class="mdl-layout-title">Pharmacy</span>
+
+      <!-- Displayed on Computer and Tablet -->
+      <!-- Search -->
+      <div class="mdh-expandable-search mdl-cell--hide-phone" font-style:italic>
+        <i class="material-icons" style="color:white">search</i>
+        <form action="#">
+          <input class="inpt"  onkeydown="style='opacity:1.0'" type="text" placeholder="Enter Id / Name" size="1" style="font-style:italic; opacity:0.8">
+        </form>
+      </div>
+<script>
+   $(document).click(function (event) {            
+    $('.mdh-expandable-search mdl-cell--hide-phone.inpt').style.=0.6;
+});
+</script>
+     
+
+      <!-- Displayed on mobile -->
+      <div class="mdl-layout-spacer mdl-cell--hide-tablet mdl-cell--hide-desktop"></div>
+      <!-- Search button -->
+      <button class="mdh-toggle-search mdl-button mdl-js-button mdl-button--icon mdl-cell--hide-tablet mdl-cell--hide-desktop">
+        <i class="material-icons">search</i>
+      </button>
+      <div style="font-size:20px">
+     <span onclick ="window.location.href='home_alt.html'" class="glyphicon glyphicon-log-out" style="cursor:pointer "></span>
+     </div>
+
+    </div>
+  </header>
+
+  <!-- Menu -->
+  <div class="mdl-layout__drawer" style="background-color:#eaeaea">
+    <span class="mdl-layout-title " style="margin-top:20px">
+      <img src="Pharmacy-Management1.png">
+
+     </span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="../proj/pharm.html" style="font-weight:bold ;font-style:italic;font-color:black">Home</a>
+      <a class="mdl-navigation__link" href="" style="font-weight:bold ;font-style:italic">Update Quantity </a>
+      <a class="mdl-navigation__link" href="" style="font-weight:bold; font-style:italic">Remove Medicine</a>
+     
+    </nav>
+  </div>
+
+  <!-- Body -->
+  <main class="mdl-layout__content">
+    <div class="page-content"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+  </main>
+
+</div>
+
+  
+</body>
+</html>
