@@ -64,7 +64,7 @@
       <div style="z-index:-1;position:relative">
       <div style="position:absolute ;z-index:10; ">
         
-    <div id="histin" style="display: none ; position:absolute">
+    <div id="histin" style="display: block ; position:absolute">
          <table class="mdl-data-table mdl-js-data-table" style="position:absolute; z-index:11;margin: 80px 150px; ">
   <thead>
     <tr >
