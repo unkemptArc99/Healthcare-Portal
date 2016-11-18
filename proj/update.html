@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<script type ="text/javascript" defer src="https://code.getmdl.io/1.2.1/material.min.js"> </script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+<link rel="stylesheet" href="material.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css"> 
+<link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body style="z-index:1">
+
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+        <div class="mdl-layout__header-row" style="background-color:black;height:80px">
+          <h3 style="color:white">Pharmacy</h3>
+          <!-- Add spacer, to align navigation to the right in desktop -->
+          <div class="android-header-spacer mdl-layout-spacer"></div>
+          <div id="srch" class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
+            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" id="search-field" placeholder="  Medicine search" style="font-style:italic">
+            </div>
+          </div>
+          <!-- Navigation -->
+          <div class="android-navigation-container">
+            <nav class="android-navigation mdl-navigation">
+               <a class="mdl-navigation__link mdl-typography--" href="logout.php" style="cursor:pointer">Logout</a>
+               <a class="mdl-navigation__link mdl-typography--" href="">Home</a>
+               
+            </nav>
+          </div>
+          
+        </div>
+      </div>
+
+
+      <div  class="android-drawer mdl-layout__drawer" style="display:">
+        <div class="mdl-layout-title" ">
+          <img class="pharmacy" src="Pharmacy-Management1.png" style="margin-top:20px">
+        </div>
+        <nav class="mdl-navigation" style="font-style:italic;">
+          <a class="mdl-navigation__link" href=""><b>Home</b></a>
+          <a class="mdl-navigation__link" href="update.html"><b>Update Medicines</b></a>
+          <a class="mdl-navigation__link" href="search.html"><b>Search Appt</b></a>
+                
+        </nav>
+      </div>
+
+
+      <main class="mdl-layout__content" >
+      <div style="z-index:-1;position:relative">
+      <div style="position:absolute ;z-index:10; ">
+
+
+              
+
+        <div style="position:absolute;height:200px; width:500px; background-color:; margin:20px 150px">
+          <!-- Colored FAB button with ripple -->
+      
+<div style="position:absolute; margin-left:5% ; width:80%; font-size:180px">
+ <span style="width:80px;font-size:30px"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="font-style:italic">
+            <input class="mdl-textfield__input" type="text" id="id" name="id" style="width:;font-style:italic;color:white" />
+            <label class="mdl-textfield__label" for="id" style=" font-weight:bold; color:white;font-size:14px" >ID</label>
+          </span>
+
+ <span style="width:150px"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="font-style:italic">
+            <input class="mdl-textfield__input" type="text" id="med" name="med" style="width:;font-style:italic;color:white" />
+            <label class="mdl-textfield__label" for="med" style=" font-weight:bold; color:white;font-size:14px" >MEDICINE</label>
+          </span>
+ <span style="width:50px"  class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="font-style:italic">
+            <input class="mdl-textfield__input" type="text" id="qty" name="qty" style="width:;font-style:italic;color:white" />
+            <label class="mdl-textfield__label" for="qty" style=" font-weight:bold; color:white;font-size:14px" >QTY</label>
+          </span>   
+ <span style="margin-left:20%">
+   <!-- Colored FAB button with ripple -->
+<button id="add" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">add</i>
+</button>
+ </span>    
+
+ <span>
+   <!-- Colored FAB button with ripple -->
+<button id="up" class="mdl-button mdl-js-button  mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">update</i>
+</button>
+ </span>            
+</div>
+
+
+
+
+          
+        </div>
+          
+        </div>
+        <table class="mdl-data-table mdl-js-data-table" style="position:absolute; z-index:11;margin: 70px 65%; ">
+  <thead>
+    <tr >
+      <th class="mdl-data-table__cell--non-numeric">ID</th>
+      <th class="mdl-data-table__cell--non-numeric">Medicine</th>
+       <th class="mdl-data-table__cell--non-numeric">Qty</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">John Lennon</td>
+      <td class="mdl-data-table__cell--non-numeric">The smart one   </td>
+      <td class="mdl-data-table__cell--non-numeric">The smart one   </td>
+      
+    </tr>
+   
+  </tbody>
+</table>
+
+
+      
+      
+         <img  src="pharm.jpg" style="height:680px; width :1360px;">
+      </div>
+
+        
+      </div>
+
+
+<script>
+
+var btn = document.getElementById("add")
+document.getElementById("add").addEventListener("click",function () {
+  var timeoutID = window.setTimeout(function () {
+      window.location.href= "update.html";
+  }, 1000);
+});
+
+document.getElementById("up").addEventListener("click",function () {
+  var timeoutID = window.setTimeout(function () {
+      window.location.href= "update.html";
+  }, 1000);
+});
+
+</script>
+
+
+</main>
+
+  </div>   
+
+
+
+</html>
+
+

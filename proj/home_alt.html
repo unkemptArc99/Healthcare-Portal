@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	 <meta charset="UTF-8"  name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 	<title>Document</title>
 	<script type ="text/javascript	" defer src="https://code.getmdl.io/1.2.1/material.min.js"> </script>
 
@@ -23,11 +23,11 @@
 
 <div style="background-color:black">
 <span style="margin-left:40px;position:relative;">
-   <img  src="logo.png" style="height:80px; width : 100px; margin-left:80px ;margin-top:15px" >
+   <img  src="logo.png" style="height:10%px; width : 7%; margin-left:80px ;margin-top:15px" >
 
 </span>
-<span style="position:absolute; z-index:1000; margin-top:40px">
-   <font color="white" face="times" size="80px" style="margin-top: 00px; margin-left:230px; "  >
+<span style="position:absolute; z-index:1000; margin-top:3%;margin-left:18%">
+   <font color="white" face="times" size="10%"  >
     Healthcare IIT Mandi
 </font> 
 </span>
@@ -79,8 +79,8 @@
 </div>
 
 <div style="z-index:1;align="center">
-  <img  src="SouthCampus.jpg" style="height:750px; width : 1360px; opacity: 0.8 ">
-  hello
+  <img  src="SouthCampus.jpg" style="height:750px; width : 100%; opacity: 0.8 ">
+  
 </div>
 
 
@@ -103,9 +103,10 @@
             <input class="mdl-textfield__input" type="password" id="userpassdoc" name="userpassdoc"/>
             <label class="mdl-textfield__label" for="userpassdoc">Password</label>
           </div>
+          <center>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" ;color: white; height:60px; width:160px;">Login</button></center>
     </form>
-    <center>
+    
   </div> 
 </div>
 
@@ -126,12 +127,13 @@
             <label class="mdl-textfield__label" for="usernamepharm" >Username</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
-            <input class="mdl-textfield__input" type="password" id="userpasspharm" name="usernamepharm" />
+            <input class="mdl-textfield__input" type="password" id="userpasspharm" name="userpasspharm" />
             <label class="mdl-textfield__label" for="userpasspharm">Password</label>
           </div>
+          <center>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" ;color: white; height:60px; width:160px;"> Login</button></center>
     </form>
-    <center>
+    
   </div> 
 </div>
 
@@ -149,17 +151,17 @@
      <form action="register.php" style="margin-top:px; padding:20px" method="POST">
          <div>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
-            <input class="mdl-textfield__input"  type="text" id="usernamesup" name="usernamesup" />
+            <input class="mdl-textfield__input"  type="text" id="usernamesup" name="usernamesup" required="required" />
             <label class="mdl-textfield__label" for="usernamesup" > Username</label>
           </span>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic;width:180px;margin-left:20px" >
-            <input class="mdl-textfield__input" type="password" id="userpasssup" name="userpasssup" />
+            <input class="mdl-textfield__input" type="password" id="userpasssup" name="userpasssup" required="required" />
             <label class="mdl-textfield__label" for="userpasssup"> Password</label>
           </span>
         </div>
          <div>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
-            <input class="mdl-textfield__input "  type="text" id="namesup" name="namesup" />
+            <input class="mdl-textfield__input "  type="text" id="namesup" name="namesup" required="required" />
             <label class="mdl-textfield__label" for="namesup" > Name</label>
           </span>
          <span class="mdl-textfield mdl-js-textfield " style="font-style:italic; width:180px;margin-left:20px ">
@@ -168,9 +170,9 @@
           </span>
           </div>
           <div>
-            <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
+            <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:400px">
               <input class="mdl-textfield__input "  type="text" id="contact" name="contact" />
-              <label class="mdl-textfield__label" for="contact" >Contact</label>  
+              <center><label style="margin-left:" class="mdl-textfield__label " for="contact" >Contact</label></center>
             </span>
           </div>
           <div style="font-style:italic">
@@ -187,7 +189,7 @@
             <span class="mdl-radio__label">Patient</span>
          </label>
          </div>
-         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--red" style="margin-top:7px; margin-left:128px;color: white; height:35px; width:160px;">Sign up</button>
+         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--red" style="margin-top:22px; margin-left:110px;color: white; height:35px; width:160px;">Sign up</button>
     </form>
   </div> 
 </div>
@@ -220,11 +222,7 @@
 </div>
 
 
- <script>
-      $( function() {
-      $( "#datepicker" ).datepicker();
-      } );
-  </script>
+ 
 
 
 
@@ -334,7 +332,7 @@ window.onclick = function(event) {
     margin: auto;
     border: 1px solid #888;
     width: 25%;
-    height: 56%
+    height: 50%
 }
 
 /* The Close Button */
@@ -365,7 +363,7 @@ window.onclick = function(event) {
     margin: auto;
     border: 1px solid #888;
     width: 31.5%;
-    height: 60%
+    height: 65%
 }
 
 .closesign:hover,

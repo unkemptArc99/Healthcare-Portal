@@ -3,10 +3,10 @@ session_start();
 $user=$_POST["usernamepat"];
 $pass=$_POST["userpasspat"];
 
-$dbname="FinalProject";
+$dbname="proj";
 $servername="localhost";
 $username="root";
-$password="Mandabarca1!t";
+$password="pulz@sql";
 
 
 $conn=mysqli_connect($servername,$username,$password,$dbname);
@@ -27,12 +27,12 @@ if($count==1)
 	setcookie(md5('p'),'P',false,'/');
 	setcookie('usernamepat',$user,false,'/');
 	setcookie('userpasspat',$pass,false,'/');
-	echo "LOGIN SUCCESSFUL.<br>Redirecting you automatically...";
+	echo "<center>LOGIN SUCCESSFUL.<br>Redirecting you automatically...</center>";
 	echo "<meta http-equiv=\"refresh\" content=\"5;URL=patientlog.html\"/>";
 }
 else
 {
-	echo "LOGIN UNSUCCESSFUL. INVALID CREDENTIALS.<br>Redirecting you back to login page...";
+	echo "<center>LOGIN UNSUCCESSFUL. INVALID CREDENTIALS.<br>Redirecting you back to login page...</center>";
 	echo "<meta http-equiv=\"refresh\" content=\"3;URL=home_alt.html\" />";
 }
 mysqli_close($conn);

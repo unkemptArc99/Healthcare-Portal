@@ -26,12 +26,12 @@ if($count==1)
 	setcookie(md5('d'),'D',false,'/');
 	setcookie('usernamedoc',$user,false,'/');
 	setcookie('userpassdoc',$pass,false,'/');
-	echo "LOGIN SUCCESSFUL.<br>Redirecting you automatically...";
-	echo "<meta http-equiv=\"refresh\" content=\"5;URL=doclogin1.php\"/>";
+	echo "<center>LOGIN SUCCESSFUL.<br>Redirecting you automatically...</center>";
+	echo "<meta http-equiv=\"refresh\" content=\"1;URL=doclogin1.php\"/>";
 }
 else
 {
-	echo "LOGIN UNSUCCESSFUL. INVALID CREDENTIALS.<br>Redirecting you back to login page...";
+	echo "<center>LOGIN UNSUCCESSFUL. INVALID CREDENTIALS.<br>Redirecting you back to login page...</center>";
 	echo "<meta http-equiv=\"refresh\" content=\"3;URL=home_alt.html\" />";
 }
 mysqli_close($conn);

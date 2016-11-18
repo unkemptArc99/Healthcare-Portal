@@ -115,19 +115,19 @@ The Medical Unit has facilities for OPD treatment and works<br> as primary care 
         <span class="close" style="margin-left:75px">×</span>
        
       </div>
-
-     <form action="#" style="margin-top:10px; padding:20px" >
+  <form action="login_doctor.php" style="margin-top:10px; padding:20px" method="POST">
           <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
-            <input class="mdl-textfield__input" type="text" id="username"  />
-            <label class="mdl-textfield__label" for="username" >Username</label>
+            <input class="mdl-textfield__input" type="text" id="usernamedoc" name="usernamedoc"/>
+            <label class="mdl-textfield__label" for="usernamedoc">Username</label>
           </div>
           <div class="mdl-textfield mdl-js-textfield" style="font-style:italic">
-            <input class="mdl-textfield__input" type="password" id="userpass" />
-            <label class="mdl-textfield__label" for="userpass">Password</label>
+            <input class="mdl-textfield__input" type="password" id="userpassdoc" name="userpassdoc"/>
+            <label class="mdl-textfield__label" for="userpassdoc">Password</label>
           </div>
+          <center>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" ;color: white; height:60px; width:160px;">Login</button></center>
     </form>
-    <center>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" ;color: white; height:60px; width:160px;"> Login</button></center>
+   
     
    
   </div> 
@@ -153,10 +153,10 @@ The Medical Unit has facilities for OPD treatment and works<br> as primary care 
             <input class="mdl-textfield__input" type="password" id="userpass" />
             <label class="mdl-textfield__label" for="userpass">Password</label>
           </div>
-    </form>
+    
     <center>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" ;color: white; height:60px; width:160px;"> Login</button></center>
-   
+   </form>
   </div> 
 </div>
 
@@ -171,46 +171,50 @@ The Medical Unit has facilities for OPD treatment and works<br> as primary care 
        
       </div>
 
-     <form action="#" style="margin-top:px; padding:20px" >
-
+    <form action="register.php" style="margin-top:px; padding:20px" method="POST">
          <div>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
-            <input class="mdl-textfield__input"  type="text" id="username"  />
-            <label class="mdl-textfield__label" for="username" > Username</label>
+            <input class="mdl-textfield__input"  type="text" id="usernamesup" name="usernamesup" />
+            <label class="mdl-textfield__label" for="usernamesup" > Username</label>
           </span>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic;width:180px;margin-left:20px" >
-            <input class="mdl-textfield__input" type="password" id="userpass" />
-            <label class="mdl-textfield__label" for="userpass"> Password</label>
+            <input class="mdl-textfield__input" type="password" id="userpasssup" name="userpasssup" />
+            <label class="mdl-textfield__label" for="userpasssup"> Password</label>
           </span>
         </div>
          <div>
           <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:180px">
-            <input class="mdl-textfield__input "  type="text" id="username"  />
-            <label class="mdl-textfield__label" for="username" > Name</label>
+            <input class="mdl-textfield__input "  type="text" id="namesup" name="namesup" />
+            <label class="mdl-textfield__label" for="namesup" > Name</label>
           </span>
          <span class="mdl-textfield mdl-js-textfield " style="font-style:italic; width:180px;margin-left:20px ">
-            <input class="mdl-textfield__input"  type="text" id="datepicker"  />
-            <label class="mdl-textfield__label" for="datepicker" >Dob </label>
+            <input class="mdl-textfield__input"  type="text" id="datepicker" name="datepicker" />
+            <label class="mdl-textfield__label" for="datepicker" >DOB(yyyy-mm-dd)</label>
           </span>
+          </div>
+          <div>
+            <span class="mdl-textfield mdl-js-textfield" style="font-style:italic; width:400px">
+              <input class="mdl-textfield__input "  type="text" id="contact" name="contact" />
+              <center><label style="margin-left:" class="mdl-textfield__label " for="contact" >Contact</label></center>
+            </span>
           </div>
           <div style="font-style:italic">
            <label class="mdl-radio mdl-js-radio" for="option1" style="margin-top:20px;opacity:0.4">
-            <input type="radio" id="option1" name="profession" class="mdl-radio__button" checked>
+            <input type="radio" id="option1" name="profession" value="option1" class="mdl-radio__button" checked>
             <span class="mdl-radio__label">Doctor</span>
          </label>
          <label class="mdl-radio mdl-js-radio" for="option2" style="margin-left:45px;opacity:0.4">
-            <input type="radio" id="option2" name="profession" class="mdl-radio__button" checked>
+            <input type="radio" id="option2" name="profession" value="option2" class="mdl-radio__button" checked>
             <span class="mdl-radio__label">Pharmacist</span>
          </label>
          <label class="mdl-radio mdl-js-radio" for="option3" style="margin-left:45px;opacity:0.4">
-            <input type="radio" id="option3" name="profession" class="mdl-radio__button" checked>
+            <input type="radio" id="option3" name="profession" value="option3" class="mdl-radio__button" checked>
             <span class="mdl-radio__label">Patient</span>
          </label>
          </div>
-
-
+         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--red" style="margin-top:22px; margin-left:110px;color: white; height:35px; width:160px;">Sign up</button>
     </form>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--red" style="margin-top:7px; margin-left:128px;color: white; height:35px; width:160px;"> Sign up</button>
+   
    
   </div> 
 </div>
@@ -233,9 +237,9 @@ The Medical Unit has facilities for OPD treatment and works<br> as primary care 
             <input class="mdl-textfield__input" type="password" id="userpass" />
             <label class="mdl-textfield__label" for="userpass">Password</label>
           </div>
-    </form>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" margin-left:78px;color: white; height:60px; width:160px;"> Login</button>
    
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-color--green" style=" margin-left:78px;color: white; height:60px; width:160px;"> Login</button>
+   </form>
   </div> 
 </div>
 
@@ -359,7 +363,7 @@ window.onclick = function(event) {
     margin: auto;
     border: 1px solid #888;
     width: 25%;
-    height: 56%
+    height: 50%
 }
 
 /* The Close Button */
@@ -390,7 +394,7 @@ window.onclick = function(event) {
     margin: auto;
     border: 1px solid #888;
     width: 31.5%;
-    height: 60%
+    height: 65%
 }
 
 .closesign:hover,

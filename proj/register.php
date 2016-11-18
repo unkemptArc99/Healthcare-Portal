@@ -7,10 +7,10 @@ $date=$_POST["datepicker"];
 $type=$_POST["profession"];
 $contact=$_POST["contact"];
 
-$dbname="FinalProject";
+$dbname="proj";
 $servername="localhost";
 $username="root";
-$password="Mandabarca1!t";
+$password="pulz@sql";
 
 $conn=mysqli_connect($servername,$username,$password,$dbname);
 	
@@ -36,7 +36,7 @@ elseif($type=="option2")
 }
 else
 {
-	$sql="insert into Patient values('$name','$user','$pass','$date','$contact','$date')";
+	$sql="insert into Patient values('$name','$user','$pass','$contact','$date')";
 	$sql1="select * from Patient where Username='$user'";
 	$prof='p';
 }
