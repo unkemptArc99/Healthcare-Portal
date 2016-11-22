@@ -39,6 +39,7 @@ a img{
   
 }
 
+
 .android-header .mdl-menu__container {
   z-index: 50;
   margin: 0 !important;
@@ -87,6 +88,7 @@ a img{
   .android-navigation .mdl-navigation__link {
     display: inline-block;
     font-size:18px;
+    font-color:blue;
     height: 60px;
     line-height: 60px;
     background-color: transparent !important;
@@ -95,6 +97,8 @@ a img{
 
     .android-navigation .mdl-navigation__link:hover {
       border-bottom: 10px solid transparent ;
+      color:blue;
+      font-weight: bold;
     }
 
   .android-search-box {
@@ -103,8 +107,11 @@ a img{
             order: 2;
     margin-left: 16px;
     margin-right: 16px;
-      height: 60px;
-      line-height: 60px;
+     
+  }
+   .android-search-box:hover {
+    color:blue;
+     
   }
 
   .android-more-button {
@@ -115,8 +122,8 @@ a img{
   }
 
 
-.android-drawer mdl-layout__drawer:hover {
-  background-color: transparent;
+.android-drawer {
+  background-color: #ffffff;
 }
 
 .android-drawer {
@@ -132,12 +139,12 @@ a img{
 
   .android-drawer .mdl-navigation__link.mdl-navigation__link {
     font-size: 14px;
-    color: #757575;
+    color: #000000;
 
   }
 
   .android-drawer span.mdl-navigation__link.mdl-navigation__link {
-    color: #8bc34a;
+    color: #ffffff;
 
   }
 
